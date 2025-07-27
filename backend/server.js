@@ -58,7 +58,7 @@ app.use(express.static(FE_DIR));
 dotenv.config();
 
 // Definiere den Server-Port und den Pfad zur Index-Datei des Frontends
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 const FE_INDEX = join(__dirname, "../frontend/dist/index.html");
 
 // Routen
